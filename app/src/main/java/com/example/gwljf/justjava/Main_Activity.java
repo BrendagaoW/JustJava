@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
+
 public class Main_Activity extends AppCompatActivity {
 
     @Override
@@ -18,20 +20,26 @@ public class Main_Activity extends AppCompatActivity {
 //                new View.OnClickListener() {
 //                    @Override
 //                    public void onClick(View v) {
-//                        display(1);
+//                        displayQuantity(1);
 //                    }
 //                }
 //        );
     }
 
 
-    private void display(int number) {
+    private void displayQuantity(int number) {
         TextView quantityView = findViewById(R.id.quality);
-
         quantityView.setText(String.valueOf(number));
     }
 
+
     public void submitOrder(View view) {
-        display(1);
+        displayQuantity(1);
+        displayPrice(5);
+    }
+
+    private void displayPrice(int price) {
+        TextView priceView = findViewById(R.id.price);
+        priceView.setText(NumberFormat.getCurrencyInstance().format(price));
     }
 }
