@@ -34,12 +34,21 @@ public class Main_Activity extends AppCompatActivity {
 
 
     public void submitOrder(View view) {
-        displayQuantity(1);
-        displayPrice(5);
+        int quantity = 2;
+        displayQuantity(quantity);
+        displayPrice(quantity * 5);
     }
 
     private void displayPrice(int price) {
         TextView priceView = findViewById(R.id.price);
         priceView.setText(NumberFormat.getCurrencyInstance().format(price));
+    }
+
+    public void increaseQuantity(View view) {
+        displayQuantity(3);
+    }
+
+    public void decreaseQuantity(View view) {
+        displayQuantity(1);
     }
 }

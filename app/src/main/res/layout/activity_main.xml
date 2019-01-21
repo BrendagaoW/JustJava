@@ -15,6 +15,14 @@
             android:textAllCaps="true"
     />
 
+    <Button
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/increase"
+            android:layout_margin="8dp"
+            android:onClick="increaseQuantity"/>
+
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,6 +32,14 @@
             android:textColor="@android:color/black"
             android:textSize="16dp"
     />
+
+    <Button
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/decrease"
+            android:layout_margin="8dp"
+            android:onClick="decreaseQuantity"/>
 
     <TextView
             android:layout_width="wrap_content"
