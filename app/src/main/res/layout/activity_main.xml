@@ -15,31 +15,38 @@
             android:textAllCaps="true"
     />
 
-    <Button
-            android:layout_width="48dp"
+    <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="+"
-            android:id="@+id/increase"
-            android:layout_margin="8dp"
-            android:onClick="increaseQuantity"/>
-
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/quality"
-            android:text="0"
+            android:orientation="horizontal"
             android:padding="8dp"
-            android:textColor="@android:color/black"
-            android:textSize="16dp"
-    />
+    >
+        <Button
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:id="@+id/increase"
+                android:onClick="increaseQuantity"/>
 
-    <Button
-            android:layout_width="48dp"
-            android:layout_height="wrap_content"
-            android:text="-"
-            android:id="@+id/decrease"
-            android:layout_margin="8dp"
-            android:onClick="decreaseQuantity"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/quality"
+                android:text="0"
+                android:padding="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+        />
+
+        <Button
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/decrease"
+                android:onClick="decreaseQuantity"/>
+
+    </LinearLayout>
+
 
     <TextView
             android:layout_width="wrap_content"
@@ -53,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/price"
-            android:text="0"
+            android:text="$0.00"
             android:padding="8dp"
             android:textColor="@android:color/black"
             android:textSize="16dp"

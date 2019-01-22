@@ -51,7 +51,7 @@ public class Main_Activity extends AppCompatActivity {
     }
 
     public void decreaseQuantity(View view) {
-        quantity--;
+        quantity = quantity > 0 ? quantity - 1 : quantity;
         displayQuantity(quantity);
     }
 }
