@@ -42,7 +42,8 @@ public class Main_Activity extends AppCompatActivity {
 
     private void displayPrice(int price) {
         TextView priceView = findViewById(R.id.price);
-        priceView.setText(NumberFormat.getCurrencyInstance().format(price));
+        String message = "ToTal: " + NumberFormat.getCurrencyInstance().format(price) + "\nThank you!";
+        priceView.setText(message);
     }
 
     public void increaseQuantity(View view) {
@@ -54,4 +55,5 @@ public class Main_Activity extends AppCompatActivity {
         quantity = quantity > 0 ? quantity - 1 : quantity;
         displayQuantity(quantity);
     }
+
 }
